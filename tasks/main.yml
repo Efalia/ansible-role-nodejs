@@ -26,7 +26,7 @@
 - name: Add NodeSource repositories for Node.js.
   apt_repository:
     filename: "node_{{ nodejs_version }}"
-    repo: "deb [arch=amd64 signed-by=/etc/apt/signing-key-nodesource-repo.asc] https://deb.nodesource.com/node_{{ nodejs_version }} nodistro main"
+    repo: "deb [signed-by=/etc/apt/signing-key-nodesource-repo.asc] https://deb.nodesource.com/node_{{ nodejs_version }} nodistro main"
     state: present
   register: node_repo
 
